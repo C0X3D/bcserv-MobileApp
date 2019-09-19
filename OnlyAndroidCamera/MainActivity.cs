@@ -11,8 +11,10 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Plugin.Clipboard;
 using Plugin.Media;
 using Tests;
+
 //using Tesseract;
 //using System.Drawing;
 namespace OnlyAndroidCamera
@@ -29,6 +31,8 @@ namespace OnlyAndroidCamera
         TextView textEmail;
         TextView textResponse;
         TextView loginResponse;
+        Button ReadText;
+        Button backButt;
         readonly string[] permisionGroup =
         {
             Manifest.Permission.ReadExternalStorage,
@@ -109,12 +113,7 @@ namespace OnlyAndroidCamera
 
                 if (resp == "Login succesfull.")
                 {
-                    SetContentView(Resource.Layout.activity_main);
-                    capture = FindViewById<Button>(Resource.Id.butonas);
-                    CameraView = FindViewById<ImageView>(Resource.Id.cameraFeed);
-                    // Activity.
-                    textResponse = FindViewById<TextView>(Resource.Id.ocrResponse);
-                    capture.Click += Capture_Click;
+                    LoadActivityMain();
                 }
                 loginResponse.Text = resp;
             }
@@ -124,6 +123,18 @@ namespace OnlyAndroidCamera
                 loginResponse.Text = xe.Message;
             }
 
+        }
+
+        private void LoadActivityMain()
+        {
+            SetContentView(Resource.Layout.activity_main);
+            capture = FindViewById<Button>(Resource.Id.butonas);
+            CameraView = FindViewById<ImageView>(Resource.Id.cameraFeed);
+            // Activity.
+            textResponse = FindViewById<TextView>(Resource.Id.ocrResponse);
+            ReadText = FindViewById<Button>(Resource.Id.readFile);
+
+            capture.Click += Capture_Click;
         }
 
         private void TextPassword_Click(object sender, EventArgs e)
@@ -154,7 +165,28 @@ namespace OnlyAndroidCamera
 
         private void Capture_Click(object sender, EventArgs e)
         {
+            textResponse.Text = "Proccesing please wait...";
             TakePhoto();
+            ReadText.Visibility = ViewStates.Visible;
+            ReadText.Click += ReadText_Click;
+        }
+
+        private void ReadText_Click(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.content_main);
+            FindViewById<TextView>(Resource.Id.readedText).Text = "The return of readed text...";
+            FindViewById<Button>(Resource.Id.cmainBackBut).Click += BackButtClick;
+            FindViewById<Button>(Resource.Id.saveLocal).Click += SaveResponse;
+        }
+
+        private void SaveResponse(object sender, EventArgs e)
+        {
+            CrossClipboard.Current.SetText(FindViewById<TextView>(Resource.Id.readedText).Text);
+        }
+
+        private void BackButtClick(object sender, EventArgs e)
+        {
+            LoadActivityMain();
         }
 
         async void  TakePhoto()

@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main">
-   
-</RelativeLayout>
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    android:background="@mipmap/gradient">
+    <Button
+        android:layout_marginTop="10px"
+        android:text="Back"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cmainBackBut"
+        android:background="#ffb2be66" />
+    <EditText
+        android:text="salut"       
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="490.5dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:gravity="top"
+        android:id="@+id/readedText" />
+<Button
+        android:layout_marginTop="10px"
+        android:text="Copy to Clipboard"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveLocal"
+        android:background="#ffb2be66" />
+</LinearLayout>
