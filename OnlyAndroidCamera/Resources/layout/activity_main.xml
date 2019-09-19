@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400.0dp"
+        android:background="#ffdeb5b5"
+        android:layout_gravity="top"
+        android:id="@+id/cameraFeed"
+        android:layout_marginBottom="0.0dp" 
+       
+    
+    />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_gravity="bottom"
+        android:text="Capture Image"
+      
+        android:id="@+id/butonas"
+        />
+    <TextView
+        android:text="Take a Photo"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/ocrResponse" />
+    <TextView
+        android:text="Take a Photo"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/uname" />
+
+
+
+
+</LinearLayout>
