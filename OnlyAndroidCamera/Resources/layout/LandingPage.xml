@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,38 +6,78 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:gravity="right">
+    android:gravity="right"
+    android:background="@mipmap/gradient">
     <TextView
-        android:text="Log In/Sign In"
+        android:text="Mobile Ocr App"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
         android:minWidth="25px"
         android:minHeight="25px"
         android:textAlignment = "center"
-        android:id="@+id/textView1" />
+        android:id="@+id/textView1"
+        android:textColor="#ffffffff" />
+    <ImageView
+        android:src="@mipmap/logo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/imageView1"
+        android:adjustViewBounds="false"
+        android:layout_marginBottom="30px"
+    />
+    
     <EditText
         android:text =""
         android:hint ="Username"
-        android:inputType="textPersonName"
+        android:textColorHint = "@android:color/white"
+        android:background="#ff533ab1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textUsername" />
+        android:layout_height="60dp"
+        android:inputType="textPersonName"
+        android:id="@+id/textUsername"
+        android:textColor="#ffffffff"
+         android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:autoSizeMaxTextSize="@dimen/abc_action_bar_content_inset_material"
+        android:autoSizeMinTextSize="@dimen/abc_action_bar_content_inset_material" />
     <EditText
         android:text =""
-        android:inputType="textPassword"
+        android:textColorHint = "@android:color/white"
+        android:background="#ff533ab1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"
         android:hint ="Password"
-        android:id="@+id/textPassword" />
+         android:textColor="#ffffffff"
+         android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:id="@+id/textPassword"
+        android:autoSizeMaxTextSize="@dimen/abc_action_bar_content_inset_material"
+        android:autoSizeMinTextSize="@dimen/abc_action_bar_content_inset_material" />
+
     <EditText
-       
+        android:textColorHint = "@android:color/white"
+        android:background="#ff533ab1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
         android:visibility = "invisible"
         android:hint ="email@domain.com"
         android:inputType="textEmailAddress"
+        android:layout_marginBottom="40px"
+         android:textColor="#ffffffff"
         android:id="@+id/textEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+         android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:autoSizeMaxTextSize="@dimen/abc_action_bar_content_inset_material"
+        android:autoSizeMinTextSize="@dimen/abc_action_bar_content_inset_material" />
+
+
+
     <GridLayout
         android:minWidth="25px"
         android:minHeight="25px"
@@ -46,37 +86,45 @@
         android:id="@+id/gridLayout1">
         <Button
             android:text="Log In"
-            android:width="100dp"
-            android:id="@+id/loginbut" />
+            android:width="130dp"
+            android:height="60dp"
+            android:textColor="#ffffffff"
+            android:layout_marginLeft="55px"
+            android:id="@+id/loginbut"
+            android:background="#ff533ab1" />
         <Button
             android:layout_gravity="right"
-            android:width="100dp"
+            android:width="130dp"
+            android:textColor="#ffffffff"
+              android:layout_marginRight="55px"
+            android:height="60dp"
             android:text="Sign Up"
             android:id="@+id/signupbut"
-           />
+            android:background="#ff533ab1" />
     </GridLayout>
-      <LinearLayout
-        android:background = "#ff795548"
+    <LinearLayout
+        android:background = "#ff6200ea"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_gravity ="bottom"
-        android:layout_marginTop="100.0dp"
-        android:id = "@+id/signupForm">
+        android:layout_height="match_parent"
+        android:id = "@+id/signupForm"
+        android:gravity="bottom"
+        android:layout_marginTop="148.0dp">
         <TextView
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
-            android:layout_height ="250px"
-            android:minWidth="25px"
-            android:maxHeight="50px"
+            android:layout_height ="match_parent"
+            android:minWidth="100dp"
+            android:maxHeight="60px"
             android:textAlignment = "center"
             android:id="@+id/textView2"
             android:textStyle="bold"
-            android:textColor="#fffffde7" /> 
-    
+            android:textColor="#fffffde7"
+        />
+
     </LinearLayout>
-  
-    </LinearLayout>
+
+</LinearLayout>
 
 
 

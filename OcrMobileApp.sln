@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlyAndroidCamera", "OnlyAndroidCamera\OnlyAndroidCamera.csproj", "{AA28E080-A89C-483E-816B-A7F416218AB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "..\Server Business Cards\Tests\Tests.csproj", "{DBE45AAC-E77A-4120-A2FF-A8A16DB8FB18}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,10 +17,6 @@ Global
 		{AA28E080-A89C-483E-816B-A7F416218AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA28E080-A89C-483E-816B-A7F416218AB4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AA28E080-A89C-483E-816B-A7F416218AB4}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{DBE45AAC-E77A-4120-A2FF-A8A16DB8FB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DBE45AAC-E77A-4120-A2FF-A8A16DB8FB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DBE45AAC-E77A-4120-A2FF-A8A16DB8FB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DBE45AAC-E77A-4120-A2FF-A8A16DB8FB18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

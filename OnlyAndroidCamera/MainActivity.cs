@@ -46,7 +46,7 @@ namespace OnlyAndroidCamera
             SetContentView(Resource.Layout.activity_main);
             RequestPermissions(permisionGroup, 0);
             Tests.Statics.WebLink = @"http://192.168.43.204/biz";
-            var txt = Tests.Statics.WebLink + "/api/upload?name=" + Tests.Statics.AuthName;
+            var txt = "Server " + Tests.Statics.WebLink;
 
 
             if (string.IsNullOrEmpty(Statics.uname))

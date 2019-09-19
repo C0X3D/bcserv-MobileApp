@@ -73,6 +73,9 @@
     <Reference Include="Mono.Android" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="Tests">
+      <HintPath>..\..\..\Server Business Cards\Tests\bin\Debug\Tests.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommunicationEngine.cs" />
@@ -140,10 +143,13 @@
     <AndroidResource Include="Resources\layout\LandingPage.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Server Business Cards\Tests\Tests.csproj">
-      <Project>{dbe45aac-e77a-4120-a2ff-a8a16db8fb18}</Project>
-      <Name>Tests</Name>
-    </ProjectReference>
+    <AndroidResource Include="Resources\values\style.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\gradient.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
