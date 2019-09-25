@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/gradient"
+    >
+    <ScrollView  
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="571.5dp"
+        >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom = "0dp"
+        android:id="@+id/cardList"
+        android:background="#ff6593af" >
+
+
+    </LinearLayout>
+        </ScrollView>
+    <GridLayout
+        
+        android:minWidth="25px"
+       android:layout_gravity="top"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout1"
+        android:background="#ff71cfa1" >
+        <Button
+            android:text="Scan New"
+            android:id="@+id/newCard" />
+        <Button
+            android:text="Settings"
+            android:layout_gravity="right"
+            android:id="@+id/buttSettings" />
+        <Button
+            android:text="About"
+            android:layout_gravity="right"
+            android:id="@+id/buttAbout" />
+    </GridLayout>
+
+</LinearLayout>
